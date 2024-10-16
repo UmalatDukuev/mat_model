@@ -30,7 +30,6 @@ extern "C"
         std::vector<std::vector<double>> result;
         std::vector<double> y = y0;
         double t = t0;
-        double t1 = t0;
 
         while (t <= t_end)
         {
