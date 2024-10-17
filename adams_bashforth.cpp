@@ -12,7 +12,7 @@ extern "C"
         double t = t0;
         result.push_back(y);
         std::vector<double> f_prev = f(t, y);
-        for (size_t i = 0; i < y.size(); ++i)
+        for (std::size_t i = 0; i < y.size(); ++i)
         {
             y[i] = y[i] + step * f_prev[i];
         }
@@ -22,7 +22,7 @@ extern "C"
         {
             result.push_back(y);
             std::vector<double> f_curr = f(t, y);
-            for (size_t i = 0; i < y.size(); ++i)
+            for (std::size_t i = 0; i < y.size(); ++i)
             {
                 y[i] = y[i] + step / 2 * (3 * f_curr[i] - f_prev[i]);
             }

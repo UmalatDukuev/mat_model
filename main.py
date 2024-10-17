@@ -11,8 +11,8 @@ for component in components:
     rk4_col = f'{component}_rk4'
     ab_col = f'{component}_ab'
 
-    plt.plot(data['t'], data[rk4_col], label=f'{component} (RK4)', color='blue')
-    plt.plot(data['t'], data[ab_col], label=f'{component} (Adams-Bashforth)', color='red')
+    plt.plot(data['t'], data[rk4_col], label=f'{component} RK4', color='blue')
+    plt.plot(data['t'], data[ab_col], label=f'{component} Adams-Bashforth', color='red')
 
     plt.xlabel('Time (t)')
     plt.ylabel(component)

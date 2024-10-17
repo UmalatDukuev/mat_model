@@ -3,7 +3,7 @@
 std::vector<double> operator+(const std::vector<double> &vec1, const std::vector<double> &vec2)
 {
     std::vector<double> result(vec1.size());
-    for (size_t i = 0; i < vec1.size(); ++i)
+    for (std::size_t i = 0; i < vec1.size(); ++i)
     {
         result[i] = vec1[i] + vec2[i];
     }
@@ -13,7 +13,7 @@ std::vector<double> operator+(const std::vector<double> &vec1, const std::vector
 std::vector<double> operator*(double scalar, const std::vector<double> &vec)
 {
     std::vector<double> result(vec.size());
-    for (size_t i = 0; i < vec.size(); ++i)
+    for (std::size_t i = 0; i < vec.size(); ++i)
     {
         result[i] = scalar * vec[i];
     }
@@ -39,7 +39,7 @@ extern "C"
             std::vector<double> k3 = f(t + step / 2, y + step / 2 * k2);
             std::vector<double> k4 = f(t + step, y + step * k3);
 
-            for (size_t i = 0; i < y.size(); ++i)
+            for (std::size_t i = 0; i < y.size(); ++i)
             {
                 y[i] = y[i] + (step / 6) * (k1[i] + 2 * k2[i] + 2 * k3[i] + k4[i]);
             }
